@@ -4,14 +4,14 @@ fun main(){
     println("Enter value of N")
     val n = readln().toInt()
 
-    GlobalScope.launch {
+    runBlocking {
        val res =  async {
             fac(n)
         }
 
         println(res.await())
     }
-    Thread.sleep(2000)
+
 }
 suspend fun fac(n:Int):Int{
      if(n==1){
