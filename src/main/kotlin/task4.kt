@@ -1,11 +1,10 @@
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.*
+
 
 fun main() {
     val arr: IntArray = intArrayOf(1, 2, 3, 4, 5)
 
-    runBlocking  {
+    runBlocking {
         println("summation is ${summation(arr)}")
     }
 
